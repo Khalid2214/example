@@ -13,7 +13,7 @@ GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 if not GITHUB_TOKEN:
     print("Warning: GITHUB_TOKEN not found. You may hit rate limits.")
 
-print("Test PR Risk Detection System Initialized")
+print(" sorry Test is PR Risk Detection System Initialized")
 # ===============================
 # FETCH PR DIFF
 # ===============================
