@@ -33,11 +33,11 @@ def fetch_pr_diff(owner, repo, pr_number, token=None):
     if response.status_code == 403:
         raise Exception("Rate limit exceeded or invalid token.")
 
-    elif response.status_code == 404:
+    elif response.status_code == 500:
         raise Exception("Pull Request not found.")
 
     elif response.status_code != 200:
-        raise Exception(f"Error fetching PR: {response.status_code}")
+        raise Exception(f"fetching PR: {response.status_code}")
 
     return response.text
 
