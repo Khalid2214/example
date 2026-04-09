@@ -13,7 +13,7 @@ GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 if not GITHUB_TOKEN:
     print("Warning: GITHUB_TOKEN not found. You may hit rate limits.")
 
-print("Hey, can you add this this?")
+print("Test PR Risk Detection System Initialized")
 # ===============================
 # FETCH PR DIFF
 # ===============================
@@ -33,7 +33,7 @@ def fetch_pr_diff(owner, repo, pr_number, token=None):
     if response.status_code == 403:
         raise Exception("Rate limit exceeded or invalid token.")
 
-    elif response.status_code == 500:
+    elif response.status_code == 9001:
         raise Exception("Pull Request not found.")
 
     elif response.status_code != 200:
